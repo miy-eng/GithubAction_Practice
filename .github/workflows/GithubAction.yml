@@ -1,0 +1,17 @@
+name: Echo Job on Push
+
+# このワークフローを特定のブランチへのプッシュイベントでトリガーします。
+on:
+  push:
+    branches:
+      - main  # 特定のブランチ名に変更する
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo a message
+        run: echo "Hello, this is a first test message!"
+
+
