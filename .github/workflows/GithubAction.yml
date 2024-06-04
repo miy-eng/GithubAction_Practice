@@ -4,7 +4,7 @@ name: Echo Job on Push
 on:
   push:
     branches:
-      - main  # 特定のブランチ名に変更する
+      - feature  # 特定のブランチ名に変更する
 
 jobs:
   echo-job:
