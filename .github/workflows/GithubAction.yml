@@ -15,7 +15,7 @@ jobs:
         run: echo "Hello, this is a first test message!"
       - name: Echo repository name
         run: |
-          echo "Repository: ${{ github.repository }}"caca
+          echo "Repository: ${{ github.repository }}"
       - name: Echo branch name
         run: |
           echo "Branch: ${{ github.ref }}"
