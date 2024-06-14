@@ -7,11 +7,9 @@ on:
 jobs:
   display-text:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
       - name: Display file contents
         run: |
           # ここにファイルの内容を表示するコマンドを書く
-          cat ~/IaC_Home/github_handson/GithubAction_Practice/git_lunch.txt
+          cat GithubAction_Practice/git_lunch.txt
