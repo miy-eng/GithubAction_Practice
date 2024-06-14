@@ -1,0 +1,16 @@
+name: Display File Contents
+
+on:
+  push:
+    branches:
+      - feature  # featureブランチにプッシュされた場合にトリガー
+
+jobs:
+  display-text:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Display file contents
+        run: |
+          # ここにファイルの内容を表示するコマンドを書く
+          cat ~/IaC_Home/github_handson/GithubAction_Practice/git_lunch.txt
