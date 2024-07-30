@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  pocHandsonMisato20240712Logs:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'poc-handson-misato-20240712-logs'
+
+  pocHandsonMisato20240712:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'poc-handson-misato-20240712'
+      LoggingConfiguration:
+        DestinationBucketName: !Ref pocHandsonMisato20240712Logs
+        LogFilePrefix: 'logs/'
+
+Outputs:
+  pocHandsonMisato20240712Name:
+    Description: 'Output the name of the S3 bucket'
+    Value: !Ref pocHandsonMisato20240712
+    Export:
+      Name: pocHandsonMisato20240712NameExport
+
+  pocHandsonMisato20240712LogsName:
+    Description: 'Output the name of the S3 bucket for logs'
+    Value: !Ref pocHandsonMisato20240712Logs
+    Export:
+      Name: pocHandsonMisato20240712LogsNameExport
