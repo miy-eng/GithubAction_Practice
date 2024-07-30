@@ -20,6 +20,8 @@ jobs:
     name: Deploy to AWS
     runs-on: ubuntu-latest
     steps:
+    - name: Echo handson_env
+      run: echo "$app-name"
     - name: Checkout
       uses: actions/checkout@v2 
     - name: Configure AWS credentials
@@ -35,4 +37,3 @@ jobs:
           --stack-name ${{ env.sys-name }}-${{ env.env-name }}-${{ github.event.repository.name }}-s3 \
 
 
-          
